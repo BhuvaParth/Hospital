@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header(props) {
     return (
@@ -27,11 +28,26 @@ function Header(props) {
                     </div>
                     <nav id="navbar" className="navbar order-last order-lg-0">
                         <ul>
-                            <li><a className="nav-link scrollto active" href="index.html">Home</a></li>
-                            <li><a className="nav-link scrollto" href="./pages/departments.html">Departments</a></li>
-                            <li><a className="nav-link scrollto" href="./pages/doctors.html">Doctors</a></li>
-                            <li><a className="nav-link scrollto " href="./pages/about.html">About</a></li>
-                            <li><a className="nav-link scrollto" href="./pages/contact.html">Contact</a></li>
+                            <li>
+                                {/* <a className="nav-link scrollto active" href="index.html">Home</a> */}
+                                <NavLink to={'/'} className="nav-link scrollto active">Home</NavLink>
+                            </li>
+                            <li>
+                                {/* <a className="nav-link scrollto" href="./pages/departments.html">Departments</a> */}
+                                <NavLink to={'/Departments'} className="nav-link scrollto">Departments</NavLink>   
+                            </li>
+                            <li>
+                                {/* <a className="nav-link scrollto" href="./pages/doctors.html">Doctors</a> */}
+                                <NavLink to={'/Doctors'} className="nav-link scrollto">Doctors</NavLink>   
+                            </li>
+                            <li>
+                                <a className="nav-link scrollto " href="./pages/about.html">About</a>
+                                <NavLink to={'/About'} className="nav-link scrollto">About</NavLink>   
+                            </li>
+                            <li>
+                                {/* <a className="nav-link scrollto" href="./pages/contact.html">Contact</a> */}
+                                <NavLink to={'/Contact'} className="nav-link scrollto">Contact</NavLink>   
+                            </li>
                         </ul>
                         <i className="bi bi-list mobile-nav-toggle" />
                     </nav>
