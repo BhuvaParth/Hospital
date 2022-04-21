@@ -30,29 +30,31 @@ function Header(props) {
                         <ul>
                             <li>
                                 {/* <a className="nav-link scrollto active" href="index.html">Home</a> */}
-                                <NavLink to={'/'} className="nav-link scrollto active">Home</NavLink>
+                                <NavLink exact to={'/'} className="nav-link scrollto">Home</NavLink>
                             </li>
                             <li>
                                 {/* <a className="nav-link scrollto" href="./pages/departments.html">Departments</a> */}
-                                <NavLink to={'/Departments'} className="nav-link scrollto">Departments</NavLink>   
+                                <NavLink exact to={'/Departments'} className="nav-link scrollto">Departments</NavLink>   
                             </li>
                             <li>
                                 {/* <a className="nav-link scrollto" href="./pages/doctors.html">Doctors</a> */}
-                                <NavLink to={'/Doctors'} className="nav-link scrollto">Doctors</NavLink>   
+                                <NavLink exact to={'/Doctors'} className="nav-link scrollto">Doctors</NavLink>   
                             </li>
                             <li>
-                                <a className="nav-link scrollto " href="./pages/about.html">About</a>
-                                <NavLink to={'/About'} className="nav-link scrollto">About</NavLink>   
+                                {/* <a className="nav-link scrollto " href="./pages/about.html">About</a> */}
+                                <NavLink exact to={'/About'} className="nav-link scrollto">About</NavLink>   
                             </li>
                             <li>
                                 {/* <a className="nav-link scrollto" href="./pages/contact.html">Contact</a> */}
-                                <NavLink to={'/Contact'} className="nav-link scrollto">Contact</NavLink>   
+                                <NavLink exact to={'/Contact'} className="nav-link scrollto">Contact</NavLink>   
                             </li>
                         </ul>
                         <i className="bi bi-list mobile-nav-toggle" />
                     </nav>
-                    <a href="./pages/appointment.html" className="appointment-btn scrollto"><span className="d-none d-md-inline">Make an</span>
-                        Appointment</a>
+                    {/* <a href="./pages/appointment.html" className="appointment-btn scrollto"><span className="d-none d-md-inline">Make an</span>
+                        Appointment</a> */}
+                        <NavLink to={'/Make_anAppointment'} className="appointment-btn scrollto"><span className="d-none d-md-inline">Make anAppointment</span></NavLink>
+
                     <a href="#" className="appointment-btn scrollto">
                         <span className="d-none d-md-inline">Login/ Signup</span>
                     </a>
